@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\begin{document}
+\thispagestyle{empty}
+\begin{singlespacing}
+\begin{align*}
+    &\text{Test 1:}\\
+    &\textbf{Planck function:}\ \ B_{\nu}(T)=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1},\ \ \ B_{\lambda}(T)=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}\\
+    &\text{with units erg s}^{-1}\text{Hz}^{-1}\text{cm}^{-2}\text{sr}^{-1}\text{ and erg s}^{-1}\text{cm}^{-1}\text{cm}^{-2}\text{sr}^{-1}\text{, respectively. We also have }\\
+    &h=6.63\times10^{-27}\text{erg s, }c=3.00\times10^{10}\text{cm s}^{-1}\text{, }k=1.38\times10^{-16}\text{ erg K}^{-1}.\\
+    &\text{Note that }B_{\nu}(T)=I_{\nu}(T)\text{ at thermal equilibrium (when collisions dominate).}\\
+    &\textbf{Rayleigh-Jeans law:}\ \ B_{\lambda}(T)\simeq\frac{2ckT}{\lambda^4}\text{, obtained when \(hc\ll\lambda kT\)}\\
+    &\textbf{Wien's displacement law:}\ \ \lambda_{\text{max}}=\frac{0.29}{T}\ \text{cm}\\
+    &\textbf{Stefan-Boltzmann law:}\ \ F=\sigma T^4,\ \ \sigma=\frac{2\pi^5k^4}{15h^3c^2}=5.67\text{ erg s}^{-1}\text{cm}^{-2}\text{K}^{-4}.\\
+    &\text{Also note that}\ \ F = \pi\int_o^\infty B_\lambda(T)d\lambda\\
+    &\textbf{Luminosity:}\ \ L_{\ast}=4\pi R_{\ast}^2\sigma T_{\text{eff}}^4\\
+    &\textbf{Magnitude:}\ \ m_1-m_2=2.5\log{\left(\frac{F_1}{F_2}\right)}\\
+    &\textbf{Distance modulus:}\ \ m-M=5\log{\left(\frac{d}{10\text{ pc}}\right)}\\
+    &\textbf{Energy of hydrogen electron:}\ \ E_n = 13.6(1-1/n^2)\\
+    &\textbf{Degeneracy for hydrogen:}\ \ 
+    g_n=2n^2\\
+    &\textbf{Boltzmann equation:}\ \ 
+    \frac{n_i}{n_j}=\frac{g_i}{g_j}e^{-(E_i-E_j)/kT},\ \ \frac{n_i}{n_{\text{ion}}}=\frac{g_i}{Z}e^{-E_i/kT}\\
+    &\textbf{Partition function:}\ \ 
+    Z=\sum_ig_ie^{-E_i/kT}\\
+    &\textbf{Saha equation:}\ \ 
+    \frac{n_{i+1}n_\text{e}}{n_i}=\left(\frac{2\pi m_\text{e}kT}{h^2}\right)^{3/2}\frac{2Z_{i+1}}{Z_i}e^{-\chi_i/kT}\\
+    &\text{where }m_\text{e}=9.109\times10^{-28}\text{, and }\chi_i\text{ is the ionization potential.}\\
+    &\textbf{Fractional ionization:}\ \ f_i = \frac{n_i}{n_1 + n_2 + n_3 + \ldots} = \frac{\left(\frac{n_i}{n_{i-1}}\right)\left(\frac{n_{i-1}}{n_{i-2}}\right)\cdots\left(\frac{n_2}{n_1}\right)}{1+\left(\frac{n_2}{n_1}\right)+\left(\frac{n_3}{n_2}\right)\left(\frac{n_2}{n_1}\right)+\left(\frac{n_4}{n_3}\right)\left(\frac{n_3}{n_2}\right)\left(\frac{n_2}{n_1}\right)+\cdots}\\
+    &\textbf{Mean molecular weight:}\ \ \mu=\frac{1}{n_\text{tot}m_\text{H}}\sum_i n_im_i\\
+    &\textbf{Maxwellian velocity distribution:}\ \ N(v) = N4\pi v^2\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\\
+    &\textbf{Hydrostatic equilibrium:}\ \ \frac{dP(r)}{dr}=-\rho(r)g(r)\\
+    &\textbf{Universal law of graviation:}\ g(r) = \frac{GM(r)}{r^2},\ \ G = 6.67\times10^{-8}\ \text{dyn cm}^2\ \text{g}^{-2}\\
+    &\textbf{Gravitational potetial energy of sphere:}\ \ \Omega=-\int_{0}^{M_{\ast}}\frac{GM(r)}{r}dM\\
+    &\textbf{For a sphere:}\ \ V = \frac{4}{3}\pi r^3,\ \ A_\text{surface} = 4\pi r^2\\
+    &\textbf{Equipartition theorem:}\ \ K=\frac{3}{2}kT\\
+    &\textbf{Ideal gas law:}\ \ P(r) = n(r)kT = \frac{\rho(r)}{\mu m_\text{H}}kT\\
+    &\textbf{Column mass:}\ \ m(r)\equiv M(r)/dA,\ \ \text{where}\ \ M(r) = dA\int\rho(r)dr\\
+    &\textbf{Pressure of an ideal gas:}\ \ P=\frac{2}{3}\varepsilon\ \ \text{for energy per unit volume }\varepsilon=\frac{NK}{V}=\frac{3}{2}nkT.\\
+\end{align*}
+\thispagestyle{empty}
+\begin{align*}
+    &\\
+    &\textbf{Virial theorem:}\ \ 2U+\Omega=0\ \ \text{for a system in thermal equilibrium.}\\
+    &\textbf{Jeans mass:}\ M_\text{J} = \left(\frac{kT}{\mu m_{\text{H}}G}\right)^{3/2}\left(\frac{3}{4\pi\rho}\right)^{1/2}\\
+    &\textbf{Jeans length:}\ \lambda_{\text{J}} = \left(\frac{3M_{\text{J}}}{4\pi\rho}\right)^{1/3}\\
+    &\textbf{Free-fall time:}\ \ t_{\text{ff}}=\sqrt{\frac{3\pi}{32G\rho}}\\
+    &\noindent \line(1,0){470}\\
+    &\text{Test 2:}\\
+    &\textbf{Specific intensity change:}\ \ dI_\nu = -(\alpha_\nu+\varsigma_\nu)I_\nu ds\\
+    &\text{where $\alpha_\nu$ and $\varsigma_\nu$ are the absorption and scattering coefficients, respectively.}\\
+    &\textbf{Specific intensity profile:}\ \ I_\nu = I_\nu (0)e^{-(\alpha_\nu+\varsigma_\nu)s}\ \ \text{for constant extinction and no emissivity.}\\
+    &\text{Note $I_\nu$ has units of erg s$^{-1}$Hz$^{-1}$cm$^{-2}$sr$^{-1}$}.\\
+    &\textbf{Mean free path as the length-scale:}\ \ \ell_\nu = (\alpha_\nu+\varsigma_\nu)^{-1}\\
+    &\textbf{Probability of absorption:}\ \ \epsilon_\nu = \frac{\alpha_\nu}{\alpha_\nu+\varsigma_\nu}\\
+    &\textbf{Mean displacement:}\ \ \ell_\nu^{\ast2} = \frac{\ell_\nu}{\sqrt{\epsilon_\nu}} = \frac{1}{\sqrt{\alpha_\nu(\alpha_\nu+\varsigma_\nu)}}\\
+    &\textbf{Opacity:}\ \ k_\nu = \frac{1}{\rho}(\alpha_\nu+\varsigma_\nu) = \kappa_\nu + \sigma_\nu\ \ [\text{cm}^2\text{g}^{-1}]\\
+    &\textbf{Mean intensity:}\ \ J_\nu(z) = \frac{1}{4\pi}\int I_\nu(z,\theta)\ d\Omega = \frac{1}{2}\int_{-1}^{1}I_\nu(z,u)\ du\ \ \text{where}\ u = \cos(\theta).\\
+    &\textbf{Net flux:}\ \ F_\nu(z) = \int I_\nu(z,\theta)(\textbf{n}\cdot\textbf{e}_z)\ d\Omega = 2\pi\int_{-1}^{1}I_\nu(z,u)udu\ \ [\text{erg s$^{-1}$Hz$^{-1}$cm$^{-2}$}]\\
+    &\textbf{Radiative moments:}\ \ M_\nu(z,n) = \frac{1}{2}\int_{-1}^{1}I_\nu(z,u)u^ndu,\\
+    &\text{where}\ M_\nu(z,0) = J_\nu(z),\ M_\nu(z,1) = H_\nu(z) = F\nu(z)/4\pi,\ \text{and}\ M_\nu(z,2) = K_\nu(z).\\
+    &\textbf{Eddington's approximation:}\ \ J_\nu(z) = 3K_\nu(z)\\
+    &\textbf{Eddington flux:}\ \ H_\nu(\tau_\nu)\simeq -\frac{1}{3k_\nu\rho}\frac{dB_\nu(T)}{dT}\frac{dT}{dz}\\
+    &\textbf{Total Eddington flux:}\ \ H(z) = -\frac{1}{3k_\text{R}\rho}\frac{dB(T)}{dT}\frac{dT}{dz}\\
+    &\textbf{Rosseland mean opacity:}\ \ \frac{1}{k_\text{R}} = \frac{\pi}{4\sigma T^3}\int_0^\infty\frac{1}{k_\nu}\frac{dB_\nu(T)}{dT}d\nu\\
+    &\textbf{Radiative transfer equation:}\ \ \frac{1}{\rho}\frac{dI_\nu}{ds} = -k_\nu I_\nu + j_\nu,\\
+    &\text{where $\rho$ is mass density and $j_\nu$ is the emissivity in units of erg s$^{-1}$Hz$^{-1}$sr$^{-1}$g$^{-1}$}.\\
+    &\textbf{Radiative transfer in terms of optical depth:}\ \ u\frac{dI_\nu(\tau_\nu,u)}{d\tau_\nu} = I_\nu(\tau_\nu,u)-S_\nu(\tau_\nu),\\
+    &\text{for optical depth}\ d\tau_\nu \equiv -k_\nu\rho dz\ \text{and source function}\ S_\nu(\tau_\nu)\equiv\frac{j_\nu}{k_\nu}.\\
+    &\textbf{General solution:}\ \ I_\nu(\tau_\nu,u) = I_\nu(0,u)e^{\tau_\nu/u}-\frac{e^{\tau_\nu/u}}{u}\int_{0}^{\tau_\nu}S(\lambda)e^{-\lambda/u}d\lambda\\
+    &\textbf{For constant source:}\ \ I_\nu(\tau_\nu,u) = I_\nu(0,u)e^{\tau_\nu/u}+S_\nu\left(1-e^{\tau_\nu/u}\right)\\
+    &\textbf{Optically thick / LTE conditions:}\ \ I_\nu(|\tau_\nu|>1,u) \approx S_\nu\\
+    &\textbf{Optically thin / non-LTE conditions:}\ \ I_\nu(|\tau_\nu|\ll1,u) \simeq I_\nu(0,u)+S_\nu\frac{|\tau_\nu|}{u}\\
+\end{align*}
+\thispagestyle{empty}
+\begin{align*}
+    &\textbf{Grey atmosphere temperature profile:}\ \ T(\tau) = T_\text{eff}\left[\frac{3}{4}\left(\tau+\frac{2}{3}\right)\right]\\
+    &\textbf{Heisenberg inequality:}\ \ \Delta E\Delta t\ge\frac{\hbar}{2},\ \ \Delta p_x \Delta x\ge \frac{\hbar}{2}\\
+    &\textbf{Lorentz profile for natural broadening:}\ \ \varphi_\nu = \frac{\Gamma}{4\pi^2}\frac{1}{(\nu-\nu_0)^2+(\Gamma/4\pi)^2},\\
+    &\text{where $\Gamma/2\pi$ is the full-width-half-magnitude of the curve.}\\
+    &\textbf{Opacity redefined:}\ \ k_\nu = \alpha(\nu)/\rho,\ \text{where now}\ \alpha(\nu) = \frac{\pi e^2}{mc^2}f_{ij}\varphi_\nu\\
+    &\textbf{Radial velocity:}\ \ n(v_z) = n\sqrt{\frac{m}{2\pi kT}}e^{-mv_z^2/2kT}\\
+    &\textbf{Non-relativistic doppler effect:}\ \ \nu' = \nu\left(1-\frac{U}{c}\right),\ \ \frac{\Delta \nu}{\nu} = \frac{\Delta V}{c}\\
+    &\textbf{Voigt profile:}\ \ \varphi_\nu = \frac{\textsf{U}(a,v)}{\Delta v_D}\\
+    &\noindent \line(1,0){470}\\
+    &\text{Final:}\\
+    &\textbf{Equation of hydrostatic equilibrium:}\ \ \rho\frac{d^2r}{dt^2} = -\frac{\rho(r)GM(r)}{r^2} - \frac{dP}{dr}\\
+    &\textbf{Equation of mass conservation:}\ \ \frac{dM(r)}{dr} = 4\pi r^2\rho(r)\\
+    &\textbf{Energy-transport equation:}\ \ \frac{dT(r)}{dr} = -\frac{3k_\text{R}\rho}{64\pi r^2\sigma T^3}L(r)\\
+    &\textbf{Equation of energy conservation:}\ \ \frac{dL(r)}{dr} = 4\pi r^2\rho(r)\varepsilon(r),\\
+    &\text{where $\varepsilon(r)$ is the rate of thermonuclear energy generated per unit mass in erg s$^{-1}$ g$^{-1}$.}\\
+    &\textbf{Temperature gradient:}\ \ \nabla\equiv\frac{d\ln(T)}{d\ln(P)}\\
+    &\text{For pure radiative transport and hydrostatic equilibrium:}\ \ \nabla_\text{rad} = \frac{3k_\text{R}}{64\pi r^2g}\frac{P}{\sigma T^4}L(r).\\
+    &\text{Note that}\ \ \frac{dy}{dx} = y\frac{d\ln{y}}{dx}.\\
+    &\textbf{Monochromatic Eddington flux:}\ \ H_\nu(r) = \frac{k^3}{8h^2c^2}\frac{k_\text{R}}{k_\nu}\frac{T_\text{eff}^4}{T}\left(\frac{R}{r}\right)^2\mathcal{P}(u),\ \ \text{with}\ \ \mathcal{P}(u) = \frac{u^4e^u}{(e^u-1)^2},\ \ u = \frac{h\nu}{kT}\\
+    &\textbf{Volume of a cell in phase space:}\ \ \Delta x\Delta y\Delta z \Delta p_x\Delta p_y\Delta p_z = h^3\\
+    &\textbf{Non-degenerate:}\ \ n_e(p)\le\frac{8\pi p^2 dp}{h^3}\ \ \ \ \ \textbf{Degenerate:}\ \ n_e(p)\gtrsim \frac{8\pi p^2 dp}{h^3}\\
+    & \textbf{Conductive Eddington flux:}\ \ H_\text{cond} = \frac{4\sigma T^3}{3\pi k_\text{cond}\rho}\frac{dT}{dr}\\
+    &\textbf{Radiative Eddington flux:}\ \ H_\text{rad} = \frac{4\sigma T^3}{3\pi k_\text{rad}\rho}\frac{dT}{dr}\\
+    &\textbf{Total Eddington flux:}\ \ H_\text{tot} = H_\text{rad} + H_\text{cond} = \frac{4\sigma T^3}{3\pi k_\text{tot}\rho}\frac{dT}{dr},\ \ \text{where}\ \ \frac{1}{k_\text{tot}} = \frac{1}{k_\text{rad}} + \frac{1}{k_\text{cond}}\\
+    &\textbf{Bouyant force:}\ \ ma = (\rho_\text{f} - \rho_\text{c})g\Delta V\\
+    &\textbf{Condition for convection:}\ \ \left(\frac{d\rho}{dr}\right)_\text{adi} < \left(\frac{d\rho}{dr}\right)_\text{rad}\\
+    &\textbf{Energy-transport in convective equilibrium:}\ \ \frac{dT}{dr} = -\left(\frac{\gamma-1}{\gamma}\right)\frac{\rho gT}{P}\\
+    &\textbf{Schwarzchild criterion for convection:}\ \ \frac{3k_\text{R}}{64\pi r^2g}\frac{P}{\sigma T^4}L(r)>\frac{\gamma-1}{\gamma},\ \ \text{where}\ \ \gamma = c_\text{P}/c_\text{V}\\
+\end{align*}
+\thispagestyle{empty}
+\begin{align*}
+    &\textbf{Poisson equation:}\ \ \frac{1}{r^2}\frac{d}{dr}\left[\frac{r^2}{\rho(r)\frac{dP(r)}{dr}}\right] = -4\pi G\rho(r)\\
+    &\textbf{Polytropic equation of state:}\ \ P = K\rho^{(n+1)/n}\\
+    &\textbf{Lane-Emden equation:}\ \ \frac{d^2\theta(\xi)}{d\xi^2} + \frac{2}{\xi}\frac{d\theta(\xi)}{d\xi} + \theta^n(\xi) = 0\\
+    &\textbf{Equation of state for an ideal gas:}\ \ P = P_\text{ions} + P_\text{e} = (n_\text{ions} + n_\text{e})kT = \left(\frac{1}{\mu_\text{ions}} + \frac{1}{\mu_\text{e}}\right)\frac{\rho kT}{m_\text{H}}\\
+    &\textbf{Mass fraction of a species:}\ \ X_i = \frac{\rho_i}{\rho} = \frac{n_im_i}{\sum_jn_jm_j}\\
+    &\textbf{Total mean molecular weight:}\ \ \frac{1}{\mu} = \frac{1}{\mu_\text{ions}} + \frac{1}{\mu_\text{e}},\\
+    &\text{where}\ \ \frac{1}{\mu_\text{ions}} = \sum_i\frac{X_i}{A_i}\ \ \text{and}\ \ \frac{1}{\mu_\text{e}} = \sum_i\frac{z_iX_i}{A_i} = \frac{n_\text{e}}{\rho/m_\text{H}} = \frac{\text{number of free electrons}}{\text{number of nucleons}}\\
+    &\text{For full ionization:}\ \ \mu \simeq \frac{2}{3X + Y/2 + 1},\\
+    &\text{For neutral:}\ \ \mu \simeq \frac{1}{X + Y/4}\\
+    &\text{with mass fractions }X\text{ and }Y\text{ for hydrogen and helium, respectively.}\\
+    &\textbf{Equation of state for degenerate gas:}\ \ P_\text{e} \propto n_\text{e}^\gamma \propto \left(\frac{\rho}{\mu_\text{e}}\right)^\gamma\\
+    &\textbf{Radiation pressure:}\ \ P_\text{rad} = \frac{4\pi}{c}K_\nu\\
+    &\textbf{If radiation pressure dominates over gas pressure:}\ \ P_\text{rad}\approx\frac{4\sigma T^4}{3c}\\
+    &\textbf{Atomic species:}\ \ {}^A_ZX,\ \ A = \text{atomic mass},\ \ Z = \text{atomic number},\ \ X = \text{element symbol}\\
+    &\textbf{Proton-proton chains:}\\
+    &\begin{tabular}{lrcl}
+        PPI: & ${}^1\text{H}+{}^1\text{H}$ & $\rightarrow$ & ${}^2\text{H} + \beta^+ + \nu_\text{e}$ \\
+        & ${}^2\text{H} + {}^1\text{H}$ & $\rightarrow$ & ${}^3\text{He} + \gamma$ \\
+        & ${}^3\text{He} + {}^2\text{He}$ & $\rightarrow$ & ${}^4\text{He} + {}^1\text{H} + {}^1\text{H}$ \\\\
+        Total: & ${}^4\text{H}$ & $\rightarrow$ & ${}^4\text{He} + {}^1\text{H} + {}^1\text{H}$ \\
+    \end{tabular}\\
+    &\textbf{Energy generated:}\ \ Q = [M_\text{initial} - M_\text{final}]c^2 = [4M({}^1\text{H}) - M({}^4\text{He})]c^2 = 26.73\ \text{MeV}\\
+    &\textbf{Energy conversion rate:}\ \ \varepsilon = \frac{Q}{M({}^AX)c^2}\\
+    &\textbf{Energy produced through fusion:}\ \ E_\text{ms}\sim L_\ast t_\text{ms}\\
+    &\textbf{Time on main sequence:}\ \ t_\text{ms}\sim \varepsilon\frac{M_\ast c^2}{L_\ast}\\
+\end{align*}
+\end{singlespacing}
+\thispagestyle{empty}
+\end{document}
