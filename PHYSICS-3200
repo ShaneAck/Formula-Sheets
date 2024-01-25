@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{braket}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+\begin{multicols}{2}
+\thispagestyle{empty}
+\begin{align*}
+    &\text{Midterm:}\\
+    &\boldsymbol{\mu} = \frac{q}{2mc}\textbf{L} = \frac{gq}{2mc}\textbf{S}\\
+    &F_z = \boldsymbol{\mu}\cdot\frac{\partial\textbf{B}}{\partial z}\simeq\mu_z\frac{\partial B_z}{\partial Z}\\
+    &\ket{\psi} = \ket{+\textbf{z}}\braket{+\textbf{z}|\psi} + \ket{-\textbf{z}}\braket{-\textbf{z}|\psi}\\
+    &\ket{\psi} = c_+ \ket{+\textbf{z}}+c_-\ket{-\textbf{z}},\ \ \bra{\psi} = c_+^{\ast}\bra{+\textbf{z}}+c_-^{\ast}\bra{-\textbf{z}}\\
+    &\left|\braket{\pm\textbf{z}|\psi}\right|^2 \equiv \braket{\pm\textbf{z}|\psi}^{\ast}\braket{\pm\textbf{z}|\psi}\\
+    &\ket{\pm\textbf{x}} = \frac{1}{\sqrt{2}}\ket{+\textbf{z}} \pm \frac{1}{\sqrt{2}}\ket{-\textbf{z}}\\
+    &\ket{\pm\textbf{y}} = \frac{1}{\sqrt{2}}\ket{+\textbf{z}} \pm \frac{i}{\sqrt{2}}\ket{-\textbf{z}}\\
+    &\braket{S_z} = c_+^{\ast}c_+\left(\frac{\hbar}{2}\right)+c_-^{\ast}c_-\left(-\frac{\hbar}{2}\right)\\
+    &\Delta S_z = \sqrt{\braket{S_z^2} - \braket{S_z}^2}\\
+    &\ket{\psi}\xrightarrow[S_z\text{basis}]{} \begin{pmatrix} \braket{+\textbf{z}|\psi} \\ \braket{-\textbf{z}|\psi} \end{pmatrix} = \begin{pmatrix} c_+ \\ c_- \end{pmatrix}\\
+    &\bra{\psi}\xrightarrow[S_z\text{basis}]{}(\braket{\psi|+\textbf{z}},\ \braket{\psi|-\textbf{z}})\\
+    &\indent=(\braket{+\textbf{z}|\psi}^{\ast},\ \braket{-\textbf{z}|\psi}^{\ast}) = (c_+^{\ast},\ c_-^{\ast})\\
+    &\ket{+\textbf{x}} = \hat{R}(\tfrac{\pi}{2}\textbf{j})\ket{+\textbf{z}},\ \ \bra{+\textbf{x}} = \bra{+\textbf{z}}\hat{R^{\dagger}}(\tfrac{\pi}{2}\textbf{j})\\
+    &\braket{i|\hat{A}|j}^\ast = \braket{j|\hat{A}^\dagger|i}\\
+    &\hat{A}_{ij}^\dagger = A_{ji}^\ast\\
+    &(\hat{A}\hat{B})^\dagger = \hat{A}^\dagger\hat{B}^\dagger\\
+    &\text{Unitary:}\ \hat{A}^{\dagger}\hat{A} = \mathbb{I}\\
+    &\text{Hermitian/Self-adjoint:}\ \hat{A}^{\dagger} = \hat{A},\ \ \braket{i|\hat{A}|j}^\ast = \braket{j|\hat{A}|i}\\
+    &\hat{R}(d\phi\textbf{k}) = 1 - \frac{i}{\hbar}\hat{J}_zd\phi,\ \ \hat{R^{\dagger}}(d\phi\textbf{k}) = 1 + \frac{i}{\hbar}\hat{J}_z^{\dagger}d\phi\\
+    &\hat{R}(\phi\textbf{k}) = e^{-i\hat{J}_z\phi/\hbar},\ \ \hat{R}^{\dagger}(\phi\textbf{k}) = e^{i\hat{J}_z\phi/\hbar}\\
+    &e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!},\ \ \sin{x} = \sum_{n=0}^{\infty}\frac{(-1)^nx^{2n+1}}{(2n+1)!}\\
+    &\cos{x} = \sum_{n=0}^{\infty}\frac{(-1)^nx^{2n}}{(2n)!},\ \ e^{ix} = \cos{x} + i\sin{x}\\
+    &\hat{P}_+ = \ket{+\textbf{z}}\bra{+\textbf{z}},\ \ \hat{P}_- = \ket{-\textbf{z}}\bra{-\textbf{z}}\\
+    &\mathbb{I}\equiv\ket{+\textbf{z}}\bra{+\textbf{z}} + \ket{-\textbf{z}}\bra{-\textbf{z}}\\
+    &\hat{A}\xrightarrow[S_z\text{basis}]{} \begin{pmatrix} \bra{+\textbf{z}}\hat{A}\ket{+\textbf{z}} & \bra{+\textbf{z}}\hat{A}\ket{-\textbf{z}} \\ \bra{-\textbf{z}}\hat{A}\ket{+\textbf{z}} & \bra{-\textbf{z}}\hat{A}\ket{-\textbf{z}} \end{pmatrix} = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}\\
+    &\ket{\psi'}\xrightarrow[S_z\text{basis}]{} \begin{pmatrix} \braket{+\textbf{z}|\psi'} \\ \braket{-\textbf{z}|\psi'} \end{pmatrix}\\
+    &\indent =\begin{pmatrix} \bra{+\textbf{z}}\hat{R}^{\dagger}(\textstyle\frac{\pi}{2}\textbf{j})\ket{\psi} \\ \bra{-\textbf{z}}\hat{R}^{\dagger}(\textstyle\frac{\pi}{2}\textbf{j})\ket{\psi} \end{pmatrix} = \begin{pmatrix} \braket{+\textbf{x}|\psi} \\ \braket{-\textbf{x}|\psi} \end{pmatrix} \xleftarrow[S_x\text{basis}]{}\ket{\psi}\\
+    &\mathbb{S} = \begin{pmatrix} \braket{+\textbf{z}|+\textbf{x}} & \braket{+\textbf{z}|-\textbf{x}} \\ \braket{-\textbf{z}|+\textbf{x}} & \braket{-\textbf{z}|-\textbf{x}} \end{pmatrix}\ \ [S_x\rightarrow S_z\ \text{basis}]\\
+    &\hat{A}\xrightarrow[S_x\text{basis}]{}\mathbb{S}^\dagger\mathbb{AS},\ \ \text{where}\ \ \hat{A}\xrightarrow[S_z\text{basis}]{}\mathbb{A}\\
+    &[\hat{A}, \hat{B}]\equiv\hat{A}\hat{B}-\hat{B}\hat{A}\\
+\end{align*}
+\begin{align*}
+    &\\
+    &\\
+    &\braket{S_z} = \braket{\psi|\hat{J}_z|\psi}\\
+    &\hat{S}_+\ket{+\textbf{z}} = 0,\ \ \hat{S}_+\ket{-\textbf{z}} = \hbar\ket{+\textbf{z}}\\
+    &\hat{S}_-\ket{+\textbf{z}} = \hbar\ket{-\textbf{z}},\ \ \hat{S}_-\ket{-\textbf{z}} = 0\\
+    &\hat{J}_z\ket{\pm\textbf{z}} = \pm\frac{\hbar}{2}\ket{\pm\textbf{z}}\\
+    &[\hat{J}_x, \hat{J}_y] = i\hbar\hat{J}_z,\ \ [\hat{J}_y, \hat{J}_z] = i\hbar\hat{J}_x,\ \ [\hat{J}_z, \hat{J}_x] = i\hbar\hat{J}_y\\
+    &\\
+    &[\hat{J}_i,\hat{J}_j] = i\hbar\epsilon_{ijk}\hat{J}_k\\
+    &\ \ \epsilon_{ijk} =
+    \begin{cases}
+        1 & \text{if } ijk\ \text{is any even permutation of } 123\\
+        0 & \text{if } i=j,\ i=k,\ \text{or}\ j=k\\
+        -1 & \text{if } ijk\ \text{is any odd permutation of } 123
+    \end{cases}\\
+    &\noindent \line(1,0){235}\\
+    &\\
+    &\text{Final:}\\
+    &[\hat{A}, \hat{B}\hat{C}] = \hat{B}[\hat{A}, \hat{C}] + [\hat{A}, \hat{B}]\hat{C}\\
+    &\hat{\textbf{J}} = \hat{J}_x\textbf{i} + \hat{J}_y\textbf{j} + \hat{J}_z\textbf{k},\ \ \hat{\textbf{J}}^2 = \hat{J}_x^2 + \hat{J}_y^2 + \hat{J}_z^2\\
+    &\hat{\textbf{J}}^2\ket{\lambda, m} = \lambda\hbar^2\ket{\lambda, m},\ \ \hat{J}_z\ket{\lambda, m} = m\hbar\ket{\lambda, m}\\
+    &\hat{J}_\pm = \hat{J}_x \pm i\hat{J}_y\\
+    &\hat{J_x} = \frac{\hat{J}_+ + \hat{J}_-}{2},\ \ \hat{J}_y = \frac{\hat{J}_+ - \hat{J}_-}{2i}\\
+    &\hat{J}_\pm^\dagger = \hat{J}_\mp,\ \ [\hat{J}_z, \hat{J}_\pm] = \pm\hbar\hat{J}_\pm,\\
+    &[\hat{J}_+,\hat{J}_-] = i\hbar\hat{J}_z\\
+    &\hat{J}_z\hat{J}_\pm\ket{\lambda, m} = (m\pm1)\hbar\hat{J}_\pm\ket{\lambda, m}\\
+    &\hat{\textbf{J}}^2\hat{J}_\pm\ket{\lambda, m} = \lambda\hbar^2\hat{J}_\pm\ket{\lambda, m},\ \ m^2\le\lambda\\
+    &\hat{\textbf{J}}^2\ket{j, m} = j(j+1)\hbar^2\ket{j, m},\ \ \hat{J}_z\ket{j, m} = m\hbar\ket{j, m}\\
+    &j = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, 2, \ldots\\
+    &m = j, j-1, j-2, \ldots , -j+1, -j\\
+    &\text{Magnitude of angular momentum:}\ \ \sqrt{j(j+1)}\hbar\\
+    &\text{Projection onto z-axis:}\ \ j\hbar\\
+    &\bra{j, m'}\hat{J}_\pm\ket{j, m} = \sqrt{j(j+1)-m(m\pm1)}\hbar\delta_{m', m\pm1}\\
+    &\text{where}\ \ \delta_{m', m\pm1} = \braket{j, m'|j, m\pm1}\\    &\braket{\alpha|\alpha}\braket{\beta|\beta}\ge\left|\braket{\alpha|\beta}\right|^2\\
+    &[\hat{A}, \hat{B}] = i\hat{C}\ \rightarrow\ \Delta A\Delta B \ge \frac{\left|\braket{C}\right|}{2}\\
+    &\Delta J_x\Delta J_y \ge \frac{\hbar}{2}\left|\braket{J_z}\right|\\
+    &\hat{\textbf{S}}^2\ket{s,m} = s(s+1)\hbar^2\ket{s,m},\ \ \hat{S}_z\ket{s,m} = m\hbar\ket{s,m}\\
+    &s=\tfrac{1}{2},\ \ m=\pm \tfrac{1}{2},\ \ \ket{\tfrac{1}{2}, \tfrac{1}{2}} = \ket{+\textbf{z}},\ \ \ket{\tfrac{1}{2}, -\tfrac{1}{2}} = \ket{-\textbf{z}}\\
+    &\hat{\textbf{S}}\rightarrow\frac{\hbar}{2}\boldsymbol{\sigma},\ \ \boldsymbol{\sigma} = \sigma_x\textbf{i} + \sigma_y\textbf{j} + \sigma_z\textbf{k},\\
+    &\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\ \ \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix},\ \ \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\\
+    &\hat{S}_n = \hat{\textbf{S}}\cdot\textbf{n}\ \rightarrow\ \hat{S}_n\ket{\mu} = \mu\frac{\hbar}{2}\ket{\mu}\\
+\end{align*}
+\thispagestyle{empty}
+\begin{align*}
+    &\hat{U}(t)\ket{\psi(0)} = \ket{\psi(t)},\ \ \hat{U}^\dagger(t)\hat{U}(t) = 1\\
+    &\hat{U}(dt) = 1-\frac{i}{\hbar}\hat{H}dt\\
+    &\ket{\psi(t)} = e^{-i\hat{H}t/\hbar}\ket{\psi(0)}\\
+    &\hat{H} = -\hat{\boldsymbol{\mu}}\cdot\textbf{B} =  \omega_0\hat{S}_n\ \ \text{where}\ \ \textbf{B} = B_0\textbf{k},\ \ \omega_0 = geB_0/2mc\\
+    &\hat{U}(t) = e^{-i\hat{H}t/\hbar} = e^{-i\hat{S}_z\phi/\hbar} = \hat{R}(\phi\textbf{k})\ \ \text{where}\ \ \phi = \omega_0t\\
+    &\frac{\partial}{\partial t}\braket{A} = \frac{i}{\hbar}\braket{\psi(t)|[\hat{H},\hat{A}]|\psi(t)} + \braket{\psi(t)|\frac{\partial\hat{A}}{\partial t}|\psi(t)}\\
+    &\text{MRI:}\ \ \hat{H} = \omega_0\hat{S}_z + \omega_1(\cos{\omega t})\hat{S}_x\\
+    &\textbf{B} = B_1\cos{\omega t}\textbf{i} + B_0\textbf{k},\ \ \omega_0 = egB_0/2mc,\ \ \omega_1 = egB_1/2mc\\
+    &\text{Energy eigenvalue problem:}\ \ \hat{H}\ket{\psi} = E\ket{\psi}\\
+    &\text{Stationary state:}\ \ e^{-i\hat{H}t/\hbar}\ket{E} = e^{-iEt/\hbar}\ket{E}\\
+    &\hat{H}\rightarrow\begin{pmatrix} \braket{1|\hat{H}|2} & \braket{1|\hat{H}|2} \\ \braket{2|\hat{H}|1} & \braket{2|\hat{H}|2} \end{pmatrix} = \begin{pmatrix} E_0 & -A \\ -A & E_0 \end{pmatrix}\\
+    &\ket{I} = \frac{1}{\sqrt{2}}\ket{1} + \frac{1}{\sqrt{2}},\ \ \ket{II} = \frac{1}{\sqrt{2}}\ket{1} - \frac{1}{\sqrt{2}}\ket{2}\\
+    &\hat{x}\ket{x} = x\ket{x}\\
+    &\braket{x|x'} = \delta(x-x')\\
+    &\int_{-\infty}^\infty dx\delta(x-x') = 1,\ \ \int_{-\infty}^\infty dx\delta(x-x')f(x) = f(x')\\
+    &\ket{\psi} = \int_{-\infty}^\infty\ket{x}\braket{x|\psi}dx,\ \ \bra{\psi} = \int_{-\infty}^\infty\bra{x'}\braket{\psi|x'}dx'\\
+    &\mathbb{I} = \int_{-\infty}^\infty\ket{x}\bra{x}dx,\ \ \mathbb{I} = \int_{-\infty}^\infty\ket{p}\bra{p}dp\\
+    &\psi(x) = \braket{x|\psi},\ \ \braket{\psi|\psi} = \int_{-\infty}^\infty\left|\braket{x|\psi}\right|^2dx = 1\\
+    &\hat{T}(dx) = 1-\frac{i}{\hbar}\hat{p}_xdx,\ \ \hat{T}(dx)\ket{x} = \ket{x+dx}\\
+    &\hat{T}(a) = e^{-i\hat{p}_xa/\hbar},\ \ \hat{T}(a)\ket{x} = \ket{x+a},\ \ \hat{T}^\dagger\hat{T} = 1\\
+    &[\hat{x}, \hat{p}_x] = i\hbar\ \rightarrow\ \Delta x\Delta p_x\ge\frac{\hbar}{2}\\
+    &\hat{p}_x = -i\hbar\frac{\partial}{\partial x}\\
+    &\hat{H} = \frac{\hat{p}_x^2}{2m} + V(\hat{x})\\
+    &\frac{d\braket{p_x}}{dt} = \frac{i}{\hbar}\braket{\psi|[\hat{H},\hat{p}_x]|\psi} = \left\langle-\frac{dV}{dx}\right\rangle\\
+    &\braket{x|p} = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}\\
+    &\hat{p}_x\ket{\psi} = -i\hbar\int dx'\ket{x'}\frac{\partial}{\partial x'}\braket{x'|\psi}\\
+    &\braket{x|\hat{p}_x|\psi} = -i\hbar\frac{\partial}{\partial x}\braket{x|\psi}\\
+    &\braket{p|\psi} = \int dx\frac{1}{\sqrt{2\pi\hbar}}e^{-ipx/\hbar}\braket{x|\psi}\\
+    &\braket{x|\psi} = \int dp\frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}\braket{p|\psi}\\
+    &p = \frac{h}{\lambda}\\
+\end{align*}
+\begin{align*}
+    &\\
+    &\text{Harmonic oscillator:}\ \ \hat{H} = \frac{\hat{p}_x^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2\\
+    &\hat{a} = \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x}+\frac{i}{m\omega}\hat{p}_x\right),\ \ \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x} - \frac{i}{m\omega}\hat{p}_x\right)\\
+    &[\hat{a}, \hat{a}^\dagger] = 1\\
+    &\hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dagger),\ \ \hat{p}_x = -i\sqrt{\frac{m\omega\hbar}{2}}(\hat{a} - \hat{a}^\dagger)\\
+    &\hat{H} = \hbar\omega(\hat{a}^\dagger\hat{a} + \tfrac{1}{2})\\
+    &\hat{N} = \hat{a}^\dagger\hat{a}\\
+    &[\hat{N}, \hat{a}] = -\hat{a},\ \ [\hat{N}, \hat{a}^\dagger] = \hat{a}^\dagger\\
+    &\hat{N}\ket{\eta} = \eta\ket{\eta},\ \ \eta\ge0\\
+    &\hat{N}\hat{a}\ket{\eta} = (\eta - 1)\hat{a}\ket{\eta}\ \rightarrow\ \hat{a}\ket{\eta} = c_+\ket{\eta - 1}\\
+    &\hat{N}\hat{a}^\dagger\ket{\eta} = (\eta + 1)\hat{a}^\dagger\ket{\eta}\ \rightarrow\ \hat{a}^\dagger\ket{\eta} = c_-\ket{\eta + 1}\\
+    &\hat{a}\ket{\eta_\text{min}} = 0\\
+    &\hat{N}\ket{n} = n\ket{n},\ \ n = 0, 1, 2,\ldots\\
+    &\hat{a}\ket{n} = \sqrt{n}\ket{n-1},\ \ \hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1}\\
+    &\hat{H}\ket{n} = \hbar\omega(\hat{N} + \tfrac{1}{2})\ket{n}\\
+    &\ \ \    \indent = \hbar\omega(n + \tfrac{1}{2})\ket{n} = E_n\ket{n},\ \ n = 0, 1, 2, \ldots\\
+    &\braket{n'|\hat{a}|n} = \sqrt{n}\delta_{n', n-1},\ \ \braket{n'|\hat{a}^\dagger|n} = \sqrt{n+1}\delta_{n', n+1}\\
+    &\ket{n} = \frac{(\hat{a}^\dagger)^n}{\sqrt{n!}}\ket{0}\\
+    &\braket{x|\hat{p}_x|0} = -i\hbar\frac{\partial\braket{x|0}}{\partial x}\\
+    &\braket{x|0} = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-m\omega x^2/2\hbar}\\
+    &\braket{x|n} = \frac{1}{\sqrt{n!}}\braket{x|(\hat{a}^\dagger)^n|0}\\
+    &\noindent \line(1,0){235}\\
+    &\\
+    &\text{Identities:}\\
+    &\sin^2{\theta} + \cos^2{\theta} = 1\\
+    &\sin{(2\theta)} = 2\sin{\theta}\cos{\theta}\\
+    &\cos{(2\theta)} = \cos^2{\theta} - \sin^2{\theta}\\
+    &\sin{(\theta\pm\phi)} = \sin{\theta}\cos{\phi}\pm\cos{\theta}\sin{\phi}\\
+    &\cos{(\theta\pm\phi)} = \cos{\theta}\cos{\phi}\mp\sin{\theta}\sin{\phi}\\
+\end{align*}
+\thispagestyle{empty}
+\end{multicols}
+\end{document}
