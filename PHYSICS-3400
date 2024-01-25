@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{braket}
+\usepackage{setspace}
+\def\dbar{{\mathchar'26\mkern-11mu d}}
+\def\hbar{{\mathchar'26\mkern-10mu h}}
+\begin{document}
+\begin{singlespacing}
+\begin{align*}
+    &\textsf{Discrete random variables...}\\
+    &\textbf{Frequentist probability:}\ \ p = \lim_{N\rightarrow\infty}\frac{N_s}{N}\\
+    &\textbf{Elementary events:}\ \ A = \{a_j|j=1,N_A\}\\
+    &\textbf{Normalization of Probability:}\ \ \sum_{j=1}^{N_A}P(a_j) = 1,\ \ 0\le P(a_j)\le1\\
+    &\textbf{Joint probability:}\ \ P(a,b)\\
+    &\textbf{Marginal probability:}\ \ P_A(a) = \sum_b P(a,b)\\
+    &\textbf{Conditional probability:}\ \ P(a|b) = \frac{P(a,b)}{P_B(b)},\ \ P_B(b)\neq0\\
+    &\textbf{Normalization of joint probability:}\ \ \sum_a\sum_b P(a,b) = 1,\ \ 0\le P(a,b)\le1\\
+    &\textbf{Independent variables:}\ \ P(a,b) = P_A(a)P_B(b)\\
+    &\textbf{Conditional probability for independent variables:}\ \ P(a|b) = P_A(a)\\
+    &\textbf{Kronecker delta:}\ \ \delta_{x,y} = \begin{cases} 
+      1 & x = y \\
+      0 & x\neq y\\
+   \end{cases}\\
+    &\textbf{Probability distribution:}\ \ P_F(f) = \sum_a\delta_{f,F(a)}P_A(a)\\
+    &\textbf{Mean:}\ \ \braket{F}\equiv\sum_aF(a)P_A(a)\\
+    &\textbf{Moment:}\ \ \braket{F^n}\equiv\sum_aF(a)^nP_A(a)\\
+    &\textbf{Central moment:}\ \ \braket{(F-\braket{F})^n}\equiv\sum_a(F(a)-\braket{F})^nP_A(a)\\
+    &\textbf{Variance:}\ \ \sigma^2 = \braket{(F-\braket{F})^2} = \sum_a(F(a)-\braket{F})^2P_A(a) = \braket{F^2}-\braket{F}^2\\
+    &\textbf{Standard deviation:}\ \ \sigma\equiv\sqrt{\braket{F^2}-\braket{F}^2}\\
+    &\textbf{Correlation function:}\ \ f_{FG} = \braket{FG} - \braket{F}\braket{G}\\
+    &\textbf{Mean of a sum:}\ \ \braket{S} = \braket{F}N\\
+    &\textbf{Variance of sum:}\ \ \sigma_S^2 = \sigma^2N\\
+    &\textbf{Standard deviation of a sum:}\ \ \sigma_S = \sigma\sqrt{N}\\
+    &\textbf{Binomial coefficient:}\ \ \binom{N}{n} = \frac{N!}{n!(N-n)!}\\
+    &\textbf{Binomial distribution:}\ \ P(n|N) = \binom{N}{n}p^n(1-p)^{N-n}\\
+    &\textbf{Binomial theorem:}\ \ (p+q)^N = \sum_{n=0}^N\binom{N}{n}p^nq^{N-n}\\
+    &\textbf{Binomial identities:}\ \ \binom{N}{0} = \binom{N}{N} = 1,\ \ \binom{N-1}{n}+\binom{N-1}{n-1} = \binom{N}{n},\ \ \binom{N}{n+1} = \frac{N-n}{n+1}\binom{N}{n}\\
+    &\textbf{Gaussian function:}\ \ g(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{(x-x_0)^2}{2\sigma^2}\right],\ \ \braket{x} = x_0 = x_{max},\ \ \braket{(x-x_0)^2} = \sigma^2\\
+    &\textbf{Gaussian approximation to binomial distribution:}\ \ P(n|N)\approx\frac{1}{\sqrt{2\pi p(1-p)N}}\exp\left[-\frac{(n-pN)^2}{2p(1-p)N}\right]\\
+\end{align*}
+\begin{align*}
+    &\textsf{Continuous random variables...}\\
+    &\textbf{Probability density:}\ \ P([a,b]) = \int_a^bP(x)dx,\ \ \int_\Omega P(x)dx = 1\\
+    &\textbf{Marginal probability:}\ \ P_x(x) = \int_{-\infty}^{\infty}P(x,y)dy\\
+    &\textbf{Conditional probability:}\ \ P(y|x) = \frac{P(x,y)}{P_x(x)}\\
+    &\textbf{Baye's theorem:}\ \ P(y|x) = \frac{P(x|y)P_y(y)}{P_x(x)}\\
+    &\textbf{Independence:}\ \ P(x,y) = P_x(x)P_y(y)\\
+    &\textbf{Conditional probability for independent variables:}\ \ P(x|y) = P_x(x)\\
+    &\textbf{Average of a function:}\ \ \braket{F(x)} = \int_{-\infty}^{\infty}F(x)P(x)dx\\
+    &\textbf{Mean:}\ \ \braket{x} = \int_{-\infty}^{\infty}xP(x)dx\\
+    &\textbf{Moment:}\ \ \braket{x^n} = \int_{-\infty}^{\infty}x^nP(x)dx\\
+    &\textbf{Central moment:}\ \ \braket{(x-\braket{x})^n} = \int_{-\infty}^{\infty}(x-\braket{x})^nP(x)dx\\
+    &\textbf{Variance:}\ \ \sigma^2 = \braket{(x-\braket{x})^2} = \int_{-\infty}^{\infty}(x-\braket{x})^2P(x)dx = \braket{x}^2 - \braket{x^2}\\
+    &\textbf{Standard deviation:}\ \ \sigma = \sqrt{\braket{x}^2 - \braket{x^2}}\\
+    &\textbf{Gaussian integral:}\ \ G = \int_{-\infty}^{\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}}\\
+    &\textbf{Stirling's Approximation:}\ \ \ln{N!} \approx N\ln{N} - N + 1,\ \ \text{or}\ \ N! \approx N^N\exp(1-N)\\\\\\
+    &\textsf{Entropy...}\\\\
+    &\textbf{Total entropy:}\ \ S_{total}(E, V, N) = S_q(V, N) + S_p(E, N)\\
+    &\textbf{Number probability distribution:}\ \ P(N_j, N_k) = \frac{N_T!}{N_j!N_k!}\left(\frac{V_j}{V_T}\right)^{N_j}\left(\frac{V_k}{V_T}\right)^{N_k},\ \ \text{where}\ N_j + N_k = N_T\\
+    &P(N_j, N_k) = \frac{\Omega_q(N_j, V_j)\Omega_q(N_k, V_k)}{\Omega_q(N_T, V_T)},\ \ \text{where}\ \Omega_q(N, V) = \frac{V^N}{N!}\\
+    &\textbf{Configurational entropy (Boltzmann):}\ \ S_q(N, V) = k\ln{\Omega_q(N, V)} + kXN\\
+    &\textbf{Additivity of configurational entropy:}\ \ S_q(N_j, V_j, N_k, V_k) = S_q(N_j, V_j) + S_q(N_k, V_k)\\
+    &\textbf{Analytic approximation:}\ \ S_q(N, V)\approx kN\left[\ln{\left(\frac{V}{N}\right)}+X\right]\\
+    &\textbf{Energy in subsystem of classical ideal gas:}\ \ E_\alpha = \sum_{i=1}^{N_\alpha}\frac{\left|\vec{p}_{\alpha,i}\right|^2}{2m}\\
+    &\textbf{Integral over momenta of all particles:}\ \ \int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}(\cdots) dp^3_{\alpha,1}\cdots dp^3_{\alpha,N_j}\equiv\int_{-\infty}^{\infty}(\cdots)dp_\alpha\\
+    &\textbf{Energy probability distribution:}\ \ P(E_j, E_k) = \frac{\int_{-\infty}^{\infty}\delta\left(E_j - \sum_{i=1}^{N_j}\frac{\left|\vec{p}_{j,i}\right|^2}{2m}\right)dp_j \int_{-\infty}^{\infty}\delta\left(E_k - \sum_{\ell=1}^{N_k}\frac{\left|\vec{p}_{k,\ell}\right|^2}{2m}\right)dp_k}{\int_{-\infty}^{\infty}\delta\left(E_T - \sum_{i=1}^{N_T}\frac{\left|\vec{p}_i\right|^2}{2m}\right)dp}
+\end{align*}
+\begin{align*}
+    &P(E_j, E_k) = \frac{\Omega_p(E_j, N_j)\Omega_p(E_k, N_k)}{\Omega_p(E_T, N_T)}\ \ \text{where}\ \Omega_p(E_\alpha, N_\alpha) = \int_{-\infty}^{\infty}\delta\left(E_\alpha - \sum_{i=1}^{N_\alpha}\frac{\left|\vec{p}_{\alpha,i}\right|^2}{2m}\right)dp_\alpha\\
+    &\Omega_p(E, N) = S_nm(2mE)^{3N/2-1}\ \ \text{where}\ S_n = n\frac{\pi^{n/2}}{(n/2)!}\\
+    &\textbf{Energy-dependent entropy:}\ \ S_p(E, N) = k\ln{\Omega_p(E, N)},\ \ \text{where}\ \ln{\Omega_p(E, N)\approx N\left[\frac{3}{2}\ln{\left(\frac{E}{N}\right)}+X\right]}\\
+    &\text{Note the exact expression}\ \ \Omega_P(E, N) = \frac{3N\pi^{3N/2}}{(3N/2)!}m(2mE)^{3N/2-1}\\
+    &\textbf{Entropy of a subsystem of a classical ideal gas:}\ \ S_j(E_j, V_j, N_j) = kN_j\left[\frac{3}{2}\ln{\left(\frac{E_j}{N_j}\right)} + \ln{\left(\frac{V_j}{N_j}\right)} + X\right]\\
+    &\text{Note that traditionally}\ \ X = \frac{3}{2}\ln{\left(\frac{4\pi m}{3h^2}\right)}+\frac{5}{2}\\
+    &\textbf{Hamiltonian for Ideal gas:}\ \ H_\alpha(q_\alpha,p_\alpha) = \sum_{i=1}^{3N_\alpha}\frac{\left|\vec{p}_{\alpha,i}\right|^2}{2m}\\
+    &\textbf{Hamiltonian for interacting particles:}\ \ H_\alpha(q_\alpha,p_\alpha) = \sum_{i=1}^{3N_\alpha}\frac{\left|\vec{p}_{\alpha,i}\right|^2}{2m} + \sum^{N\alpha}_{i=1}\sum^{N_\alpha}_{i'=1}\phi(\vec{r}_{\alpha,i},\vec{r}_{\alpha,i'})\\
+    &\textbf{Entropy for interacting particles:}\ \ S_\alpha(E_\alpha, V_\alpha, N_\alpha) = k\ln{\Omega_\alpha(E_\alpha, V_\alpha, N_\alpha)}\\
+    &\text{where}\ \ \Omega_\alpha(E_\alpha, V_\alpha, N_\alpha) = \frac{1}{h^{3N_\alpha}N_\alpha!}\int dq_\alpha\int dp_\alpha\delta(E_\alpha - H_\alpha)\ \ \text{and}\ H_\alpha\ \text{is the Hamiltonian for the subsystem}\ \alpha\\\\\\
+    &\textsf{Thermodynamic quantities...}\\
+    &\textbf{Maxwell-Boltzmann distribution for momentum of a single particle:}\ \ P(\vec{p}_1) = \left(\frac{\beta}{2\pi m}\right)^{3/2}\exp\left(-\beta\frac{\left|\vec{p}_1\right|^2}{2m}\right)\\
+    &\textbf{Ideal gas law:}\ \ PV = \frac{N}{\beta}\ \ \text{where}\ \beta = \frac{1}{k_BT}\ \ \text{or}\ PV = Nk_BT\\
+    &\textbf{Celsius to Kelvin conversion:}\ \ T \left[\text{K}\right] = T \left[^{\circ}\text{C}\right] + 273.15\\
+    &\textbf{Equipartition theorem:}\ \ \frac{E}{N} = \frac{3}{2}k_BT\\
+    &\textbf{Equations of state:}\ \ \left(\frac{\partial S}{\partial E}\right)_{V, N} = \frac{1}{T},\ \ \left(\frac{\partial S}{\partial V}\right)_{E, N} = \frac{P}{T},\ \ \left(\frac{\partial S}{\partial N}\right)_{E, V} = -\frac{\mu}{T}\\
+\end{align*}
+\noindent\textsf{Laws and postulates of thermodynamics...}\\\\
+\textbf{0\textsuperscript{th} Law:}\ \ If two systems are in thermal equilibrium with a third system, they are in equilibrium with each other.\\\\
+\textbf{1\textsuperscript{st} Law:}\ \ Heat is a form of energy, and energy is conserved.\\\\
+\textbf{2\textsuperscript{nd} Law:}\ \ If a system is constrained, its entropy cannot decrease after the constraints are removed.\\\\
+\textbf{3\textsuperscript{rd} Law:}\ \ The entropy of any quantum mechanical system goes to constant as temperature goes to zero.\\\\
+\textbf{1\textsuperscript{st} Postulate:}\ \ There exist equilibrium states characterized by a small number of extensive parameters.\\\\
+\textbf{2\textsuperscript{nd} Postulate:}\ \ Without internal constraints, values of extensive parameters are those that maximize entropy.\\\\
+\textbf{3\textsuperscript{rd} Postulate:}\ \ Entropy of a composite system is additive.\\\\
+\textbf{4\textsuperscript{th} Postulate:}\ \ Entropy is a continuous and differentiable function of extensive parameters.\\\\
+\textsf{``Sometimes true" postulates:}\\\\
+\textbf{5\textsuperscript{th} Postulate:}\ \ Entropy is an extensive function of extensive variables.\\\\
+\textbf{6\textsuperscript{th} Postulate:}\ \ The entropy is a monotonically increasing function of energy for equilibrium values of energy.\\\\
+\textbf{7\textsuperscript{th} Postulate (The Nernst Postulate):}\ \ The entropy of any system is non-negative.\\\\
+\begin{align*}
+    &\textsf{Thermodynamic processes...}\\\\
+    &\textbf{Energy:}\ \ U = \braket{E}\\
+    &\textbf{First law in differential form:}\ \ dU = \dbar Q + \dbar W,\ \ \text{for fixed}\ N\\
+    &\textbf{Condition for exact differential:}\ \ \frac{\partial f}{\partial y}=\frac{\partial^2F}{\partial y\partial x}=\frac{\partial^2F}{\partial x\partial y}=\frac{\partial g}{\partial x},\ \ \text{for}\ dF = f(x,y)dx + g(x,y)dy\\
+    &\textbf{Integrating factor:}\ \ dG = r(x,y)\ \dbar F\\
+    &\textbf{Fundamental relation:}\ \ dU = TdS - PdV + \mu dN\\
+    &\text{Note that}\ \ \dbar Q = TdS,\ \ \dbar W = PdV\ \text{for fixed number of particles.}\\
+    &\textbf{Entropy in heat cycle:}\ \ dS = \frac{\dbar Q_H}{T_H} + \frac{\dbar Q_L}{T_L} = 0\\
+    &\textbf{Work in heat cycle:}\ \ \dbar W = \left(1-\frac{T_L}{T_H}\right)\dbar Q_H\\
+    &\textbf{Efficiency of heat engine:}\ \ \eta = \frac{\dbar W}{\dbar Q_H} = 1 - \frac{T_L}{T_H}\\
+    &\textbf{Coefficient of performance for refrigerator:}\ \ \epsilon_R = \frac{\dbar Q_L}{-\dbar W} = \frac{T_L}{T_H - T_L}\\
+    &\textbf{Coefficient of performance for heat pump:}\ \ \epsilon_{HP} = \frac{-\dbar Q_H}{-\dbar W} = \frac{T_H}{T_H - T_L}\\\\
+    &\textsf{Thermodynamic potentials...}\\
+    &\textbf{Helmholtz free energy:}\ \ F(T,V,N) \equiv U[T] = U - TS,\ \ \ \ \ \ \ \ \ \ \ \ \ \ dF = -SdT - PdV + \mu dN\\
+    &\textbf{Enthalpy:}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ H(S,P,N)\equiv U[P]=U+PV,\ \ \ \ \ \ \ \ \ \ \ \ \ dH=TdS+VdP+\mu dN\\
+    &\textbf{Gibbs free energy:}\ \ \ \ \ \ \ \ \ G(T,P,N) \equiv U[T,P] = U - TS + PV,\ \ dG = -SdT + VdP + \mu dN\\\\
+    &\textsf{Extensivity...}\\
+    &\textbf{Condition for extensivity:}\ \ S(\lambda U,\lambda V,\lambda N) = \lambda S(U,V,N)\\
+    &\textbf{Euler equation:}\ \ U = TS - PV + \mu N\\
+    &\textbf{Gibbs-Duhem relation:}\ \ d\mu = -\left(\frac{S}{N}\right)dT + \left(\frac{V}{N}\right)dP\\
+    &\textbf{Thermodynamic potentials for extensive systems:}\\
+    &F = U-TS = -PV+\mu N,\ \ \ H = U+PV = TS+\mu N,\ \ \ G = U-TS+PV = \mu N\\
+\end{align*}
+\begin{align*}
+    &\textsf{Thermodynamic identities...}\\
+    &\textbf{Coefficient of thermal expansion:}\ \ \alpha = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,N}\\
+    &\textbf{Isothermal compressibility:}\ \ \kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,N}\\
+    &\textbf{Specific heat per particle at constant pressure:}\ \ c_P = \frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_{P,N}\\
+    &\textbf{Specific heat per particle at constant volume:}\ \ c_V = \frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_{V,N}\\
+    &\textbf{Heat capacity:}\ \ C_P = Nc_P,\ \ \ C_V = Nc_V\\
+    &\textbf{Jacobians:}\ \ \frac{\partial(u,v)}{\partial(x,y)} = \begin{vmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} \end{vmatrix} = \frac{\partial u}{\partial x}\frac{\partial v}{\partial y} - \frac{\partial u}{\partial y}\frac{\partial v}{\partial x}\\
+    &\textbf{Symmetry of Jacobians:}\ \ \frac{\partial(u,v)}{\partial(x,y)} = -\frac{\partial(v,u)}{\partial(x,y)} = \frac{\partial(v,u)}{\partial(y,x)} = -\frac{\partial(u,v)}{\partial(y,x)}\\
+    &\textbf{Jacobians as partial derivatives:}\ \ \frac{\partial(u,y)}{\partial(x,y)} = \left(\frac{\partial u}{\partial x}\right)_y\\
+    &\textbf{Chain rule for Jacobians:}\ \ \frac{\partial(u,v)}{\partial(x,y)} = \frac{\partial(u,v)}{\partial(r,s)}\frac{\partial(r,s)}{\partial(x,y)}\\
+    &\textbf{Reciprocals of partial derivatives:}\ \ \left(\frac{\partial u}{\partial x}\right)_y = \left.1\middle/\left(\frac{\partial x}{\partial u}\right)_y\right.\\
+    &\textbf{Specific heat identity:}\ \ c_P = c_V + \frac{\alpha^2TV}{N\kappa_T}\\\\\\
+    &\textsf{Extremum principles, Stability conditions, Phase transitions...}\\\\
+    &\textbf{Energy minimum princple:}\ \ dU = \dbar W,\ \ \text{for constant entropy and constant number of particles}\\
+    &\textbf{Stability with respect to volume changes:}\ \ \kappa_S\ge0\\
+    &\textbf{Stability with respect to heat transfer:}\ \ c_V\ge0\\
+    &\textbf{All stability conditions:}\\
+    &U(S,V,N)\ \ \ \ \ \ \ \left(\frac{\partial^2U}{\partial S^2}\right)_{V,N}\ge0\ \ \ \ \ \ \ \left(\frac{\partial^2U}{\partial V^2}\right)_{S,N}\ge0\\
+    &F(T,V,N)\ \ \ \ \ \ \ \left(\frac{\partial^2F}{\partial T^2}\right)_{V,N}\le0\ \ \ \ \ \ \ \left(\frac{\partial^2F}{\partial V^2}\right)_{S,N}\ge0\\
+    &H(S,P,N)\ \ \ \ \ \ \ \left(\frac{\partial^2H}{\partial S^2}\right)_{P,N}\ge0\ \ \ \ \ \ \left(\frac{\partial^2H}{\partial P^2}\right)_{S,N}\le0\\
+    &G(T,P,N)\ \ \ \ \ \ \ \left(\frac{\partial^2G}{\partial T^2}\right)_{P,N}\le0\ \ \ \ \ \ \ \left(\frac{\partial^2G}{\partial P^2}\right)_{T,N}\le0\\
+    &\textbf{Helmholtz free energy of van der Waals fluid:}\ \ F_{vdW} = -Nk_BT\left[\ln\left(\frac{V-bN}{N}\right)+\frac{3}{2}\ln(k_BT)+X\right] - a\left(\frac{N^2}{V}\right)\\
+    &\textbf{Equations of state for van der Waals fluid:}\ \ P=\frac{Nk_BT}{V-bN}-\frac{aN^2}{V^2},\ \ \ U=\frac{3}{2}Nk_BT - a\left(\frac{N^2}{V}\right)\\
+    &\textbf{Latent heat:}\ \ \ell = \frac{T\Delta S}{N} = \frac{L}{N}\\
+    &\textbf{Clausius-Clapeyron equation:}\ \ \frac{dP}{dT} = \frac{\ell N}{T\Delta V} = \frac{L}{T\Delta V}\\
+\end{align*}
+\begin{align*}
+    &\textsf{The Nernst postulate...}\\\\
+    &\textbf{Specific heat at low temperatures:}\ \ \lim_{T \to 0}c_X(T) = 0\\
+    &\textbf{Coefficient of thermal expansion at low temperatures:}\ \ \lim_{T \to 0}\alpha(T) = 0\\\\\\
+    &\textsf{Canonical ensemble...}\\\\
+    &\textbf{Partition function for canonical ensemble:}\ \ Z = \frac{1}{h^{3N}N!}\int dq\int dp\exp[-\beta H(q,p)]\\
+    &\textbf{Canonical distribution:}\ \ P(p,q) = \frac{1}{h^{3N}N!Z}\exp[-\beta H(p,q)]\\
+    &\textbf{Liouville theorem:}\ \ \frac{dP}{dt} = 0\\
+    &\textbf{Helmholtz free energy of canonical ensemble:}\ \ F(T,V,N) = -k_BT\ln{Z(T,V,N)}\\
+    &\textbf{Specific heat in statistical mechanics:}\ \ \frac{1}{Nk_BT^2}\left(\braket{E^2}-\braket{E}^2\right)\\
+    &\textbf{Forces independent of momentum:}\ \ Z = \frac{1}{h^{3N}N!}(2\pi mk_BT)^{3N/2}\int dq\exp\left[-\beta\sum_{j=1}^N\sum_{i>j}^N\phi(\vec{r}_i,\vec{r}_j)\right]\\
+    &\textbf{Classical ideal gas (no forces):}\ \ Z = \frac{1}{h^{3N}N!}(2\pi mk_BT)^{3N/2}V^N\\
+    &\textbf{Hamiltonian for SHO:}\ \ H = \frac{1}{2}Kx^2 + \frac{p^2}{2m}\\
+    &\textbf{Partition function for SHO:}\ \ Z = \frac{1}{\beta\hbar\omega},\ \ \omega=\sqrt{\frac{K}{m}}\\
+    &\textbf{Hamiltonian for N SHOs:}\ \ H = \sum_{j=1}^N\left(\frac{1}{2}K_jx_j^2+\frac{p_j^2}{2m_j}\right)\\
+    &\textbf{Partition function for N SHOs:}\ \ Z = \prod_{j=1}^N\left(\frac{1}{\beta\hbar\omega_j}\right),\ \ \omega_j = \sqrt{\frac{K_j}{m_j}}\\
+\end{align*}
+\end{singlespacing}
+\end{document}
+
