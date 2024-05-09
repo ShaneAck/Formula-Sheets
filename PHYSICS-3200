@@ -27,7 +27,7 @@
     &\ket{+\textbf{x}} = \hat{R}(\tfrac{\pi}{2}\textbf{j})\ket{+\textbf{z}},\ \ \bra{+\textbf{x}} = \bra{+\textbf{z}}\hat{R^{\dagger}}(\tfrac{\pi}{2}\textbf{j})\\
     &\braket{i|\hat{A}|j}^\ast = \braket{j|\hat{A}^\dagger|i}\\
     &\hat{A}_{ij}^\dagger = A_{ji}^\ast\\
-    &(\hat{A}\hat{B})^\dagger = \hat{A}^\dagger\hat{B}^\dagger\\
+    &(\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger\\
     &\text{Unitary:}\ \hat{A}^{\dagger}\hat{A} = \mathbb{I}\\
     &\text{Hermitian/Self-adjoint:}\ \hat{A}^{\dagger} = \hat{A},\ \ \braket{i|\hat{A}|j}^\ast = \braket{j|\hat{A}|i}\\
     &\hat{R}(d\phi\textbf{k}) = 1 - \frac{i}{\hbar}\hat{J}_zd\phi,\ \ \hat{R^{\dagger}}(d\phi\textbf{k}) = 1 + \frac{i}{\hbar}\hat{J}_z^{\dagger}d\phi\\
